@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,7 +11,7 @@ namespace WebApplication1.Pages
 {
     public class AuthorizationModel : PageModel
     {
-        public string Token { get; set; }
+        public string Error { get; set; }
         public void OnGet()
         {
         }
@@ -20,30 +21,23 @@ namespace WebApplication1.Pages
             
             if (username == "123" && password == "123")
             {
-                Token = CreateToken(username);
-                 
-
+                CreateToken(username);
+            }
+            else
+            {
+                Error = "Ошибка авторизации";
             }
             
             
         }
-        private string CreateToken(string username)
+        private void CreateToken(string username)
         {
             var claims = new List<Claim> { new Claim(ClaimTypes.Name, username) };
-// создаем JWT-токен
-            //var jwt = new JwtSecurityToken(
-            //        issuer: AuthOptions.ISSUER,
-            //        audience: AuthOptions.AUDIENCE,
-            //        claims: claims,
-            //        expires: DateTime.UtcNow.Add(TimeSpan.FromMinutes(2)),
-            //        signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
 
             // создаем объект ClaimsIdentity
-            ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Cookies");
-// установка аутентификационных куки
-            SignIn(new ClaimsPrincipal(claimsIdentity), CookieAuthenticationDefaults.AuthenticationScheme);
-            //return new JwtSecurityTokenHandler().WriteToken(jwt);
-            return "Авторизация пройдена";
+            ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
         }
     }
 }
