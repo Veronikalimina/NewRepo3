@@ -1,0 +1,29 @@
+﻿@page
+@model WebApplication1.Pages.AuthorizationModel
+@{
+    ViewData["Title"] = "Авторизация";
+}
+
+<div class="authorization">
+    <div class="container">
+        <main class="form-signin w-100 m-auto">
+            <form method="post">
+                <h1 class="h3 mb-3 fw-normal">Пожалуйста войдите</h1>
+
+                <div class="form-floating">
+                    <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Login">
+                    <label for="floatingInput">Логин</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Пароль</label>
+                </div>
+
+                <input type="submit" class="btn btn-primary" value="Войти">
+            </form>
+        </main>
+    </div>
+    <div class="container">
+        @Model.Token
+    </div>
+</div>
