@@ -1,10 +1,17 @@
-﻿namespace WebApplication1.DTO
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WebApplication1.DTO
 {
+    [Table("Curator")]
     public class Curator
     {
-        public int IdCurator { get; set; }
-        public string Surname { get; set; } = "";
-        public string Name { get; set; } = "";
-        public string MiddleName { get; set; } = "";
+        [Key]
+        public Int64 IdCurator { get; set; }
+        public string? Surname { get; set; }
+        public string? Name { get; set; }
+        public string? MiddleName { get; set; }
+        public List<Group> Groups { get; set; } = null!;
     }
+   
 }

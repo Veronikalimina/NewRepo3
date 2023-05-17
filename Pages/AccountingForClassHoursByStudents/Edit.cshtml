@@ -1,0 +1,34 @@
+﻿@page
+@model WebApplication1.Pages.AccountingForClassHoursByStudents.EditModel
+
+<h4>AccountingForClassHoursByStudents</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AccountingForClassHoursByStudents.IdAccountingForClassHoursByStudents" />
+            <div class="form-group">
+                <label asp-for="AccountingForClassHoursByStudents.StudentId" class="control-label"></label>
+                <input asp-for="AccountingForClassHoursByStudents.StudentId" class="form-control" />
+                <span asp-validation-for="AccountingForClassHoursByStudents.StudentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountingForClassHoursByStudents.ClassHourDate" class="control-label"></label>
+                <input asp-for="AccountingForClassHoursByStudents.ClassHourDate" class="form-control" />
+                <span asp-validation-for="AccountingForClassHoursByStudents.ClassHourDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

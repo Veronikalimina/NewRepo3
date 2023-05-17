@@ -8,7 +8,7 @@ namespace WebApplication1.DTO
     {
         [Key]
         public Int64 IdAuthentication { get; set; }
-        public Int64 IdKyratora { get; set; }
+        public Int64 IdCurator { get; set; }
         public string Login { get; set; } = "";
         public string Password { get; set; } = "";
         public Int16 IdUser { get; set; }

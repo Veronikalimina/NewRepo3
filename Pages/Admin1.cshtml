@@ -8,32 +8,20 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">№</th>
                         <th scope="col">Куратор</th>
                         <th scope="col">Группа</th>
                         <th scope="col">Изменить</th>
                     </tr>
                 </thead>
                 <tbody>
+                @foreach (var curator in Model.Curators)
+                {
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td><button class="btn-outline-secondary">Изменить</button></td>
+                        <th scope="col">@curator.Surname @curator.Name</th>
+                        <th scope="col">@String.Join(',', curator.Groups.Select(group => group.NameGroup))</th>
+                        <th scope="col"><button>Изменить</button> </th>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry the Bird</td>
-                        <td>
-                            twitter</td>
-                        <td>twitter</td>
-                    </tr>
+                }
                 </tbody>
             </table>
         </div>
