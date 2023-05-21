@@ -1,8 +1,11 @@
-﻿namespace WebApplication1.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication1.DTO
 {
     public class Course
     {
-        public int idCourse { get; set; }
-        public int NumberCourse { get; set; }
+        [Key]
+        public Int64 idCourse { get; set; }
+        public Int16 NumberCourse { get; set; }
     }
 }

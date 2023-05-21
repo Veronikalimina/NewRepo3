@@ -11,7 +11,6 @@ namespace WebApplication1.DTO
         public string? Surname { get; set; }
         public string? Name { get; set; }
         public string? MiddleName { get; set; }
-        public List<Group> Groups { get; set; } = null!;
     }
    
 }

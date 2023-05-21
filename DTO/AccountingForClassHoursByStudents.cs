@@ -6,7 +6,7 @@ namespace WebApplication1.DTO
     {
         [Key]
         public Int64 IdAccountingForClassHoursByStudents { get; set; }
-        public Int64 StudentId { get; set; }
+        public Int64 IdStudent { get; set; }
         public DateTime ClassHourDate { get; set; }
     }
 }

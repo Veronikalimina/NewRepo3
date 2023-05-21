@@ -1,0 +1,25 @@
+﻿@page
+@model WebApplication1.Pages.LiveInAHostels.DetailsModel
+
+<div>
+    <h4>LiveInAHostel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LiveInAHostel.IdStudent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LiveInAHostel.IdStudent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LiveInAHostel.NumberRoom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LiveInAHostel.NumberRoom)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.LiveInAHostel?.IdEntryLiveInAHostel">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

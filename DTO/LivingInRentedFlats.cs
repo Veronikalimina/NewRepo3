@@ -1,9 +1,12 @@
-﻿namespace WebApplication1.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication1.DTO
 {
     public class LivingInRentedFlats
     {
-        public int IdEntryLivingInRentedFlats { get; set; }
-        public int IdStudent { get; set; }
-        public string Adress { get; set; } = "";
+        [Key]
+        public Int64 IdEntryLivingInRentedFlats { get; set; }
+        public Int64 IdStudent { get; set; }
+        public string? Adress { get; set; } = "";
     }
 }

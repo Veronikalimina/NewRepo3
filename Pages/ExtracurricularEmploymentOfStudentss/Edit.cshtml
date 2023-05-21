@@ -1,0 +1,44 @@
+﻿@page
+@model WebApplication1.Pages.ExtracurricularEmploymentOfStudentss.EditModel
+
+<h4>ExtracurricularEmploymentOfStudents</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ExtracurricularEmploymentOfStudents.IdExtracurricularEmploymentOfStudents" />
+            <div class="form-group">
+                <label asp-for="ExtracurricularEmploymentOfStudents.IdCourse" class="control-label"></label>
+                <input asp-for="ExtracurricularEmploymentOfStudents.IdCourse" class="form-control" />
+                <span asp-validation-for="ExtracurricularEmploymentOfStudents.IdCourse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtracurricularEmploymentOfStudents.IdStudent" class="control-label"></label>
+                <input asp-for="ExtracurricularEmploymentOfStudents.IdStudent" class="form-control" />
+                <span asp-validation-for="ExtracurricularEmploymentOfStudents.IdStudent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtracurricularEmploymentOfStudents.CollegeActivity" class="control-label"></label>
+                <input asp-for="ExtracurricularEmploymentOfStudents.CollegeActivity" class="form-control" />
+                <span asp-validation-for="ExtracurricularEmploymentOfStudents.CollegeActivity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtracurricularEmploymentOfStudents.ActivitiesOutsideCollege" class="control-label"></label>
+                <input asp-for="ExtracurricularEmploymentOfStudents.ActivitiesOutsideCollege" class="form-control" />
+                <span asp-validation-for="ExtracurricularEmploymentOfStudents.ActivitiesOutsideCollege" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,9 +1,12 @@
-﻿namespace WebApplication1.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication1.DTO
 {
     public class CuratorObservationSheet
     {
-        public int IdCuratorObservationSheet { get; set; }
-        public int IdStudent { get; set; }
-        public string BriefDescription { get; set; } = "";
+        [Key]
+        public Int64 IdCuratorObservationSheet { get; set; }
+        public Int64 IdStudent { get; set; }
+        public string? BriefDescription { get; set; } = "";
     }
 }

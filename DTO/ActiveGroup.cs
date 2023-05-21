@@ -1,9 +1,12 @@
-﻿namespace WebApplication1.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication1.DTO
 {
     public class ActiveGroup
     {
-        public int IdActiveGroup { get; set; }
-        public int IdGroup { get; set; }
+        [Key]
+        public Int64 IdActiveGroup { get; set; }
+        public Int64 IdGroup { get; set; }
         public string Warden { get; set; } = "";
         public string DeputyWarden { get; set; } = "";
         public string CommitteeForEducationalActivities { get; set; } = "";

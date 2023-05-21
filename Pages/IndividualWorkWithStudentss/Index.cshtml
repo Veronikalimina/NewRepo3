@@ -1,0 +1,48 @@
+﻿@page
+@model WebApplication1.Pages.IndividualWorkWithStudentss.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IndividualWorkWithStudents[0].DateConversation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndividualWorkWithStudents[0].IdStudent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndividualWorkWithStudents[0].EssenceOfConversation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndividualWorkWithStudents[0].AcceptedDecision)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.IndividualWorkWithStudents) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateConversation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdStudent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EssenceOfConversation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcceptedDecision)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdIndividualWorkWithStudents">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdIndividualWorkWithStudents">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdIndividualWorkWithStudents">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

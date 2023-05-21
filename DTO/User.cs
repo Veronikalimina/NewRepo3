@@ -7,7 +7,7 @@ namespace WebApplication1.DTO
     public class User
     {
         [Key]
-        public int IdUser { get; set; }
+        public Int16 IdUser { get; set; }
         public string UserName { get; set; } = "";
     }
 }

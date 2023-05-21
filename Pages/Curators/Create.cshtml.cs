@@ -31,8 +31,7 @@ namespace WebApplication1.Pages.Curators
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-            var list = ModelState.Where(item => item.Key != $"{nameof(Curator)}.{nameof(Curator.Groups)}").ToList();
-          if (list.Any(item => item.Value.ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid) || _context.Curators == null || Curator == null)
+          if (!ModelState.IsValid || _context.Curators == null || Curator == null)
             {
                 return Page();
             }

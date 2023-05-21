@@ -1,0 +1,48 @@
+﻿@page
+@model WebApplication1.Pages.EngagementWithParentss.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EngagementWithParents[0].DateConversation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngagementWithParents[0].IdStudent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngagementWithParents[0].EssenceOfConversation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngagementWithParents[0].AcceptedDecision)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.EngagementWithParents) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateConversation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdStudent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EssenceOfConversation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcceptedDecision)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdEngagementWithParents">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdEngagementWithParents">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdEngagementWithParents">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

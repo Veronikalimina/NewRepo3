@@ -1,0 +1,69 @@
+﻿@page
+@model WebApplication1.Pages.ActiveGroups.EditModel
+
+<h4>ActiveGroup</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ActiveGroup.IdActiveGroup" />
+            <div class="form-group">
+                <label asp-for="ActiveGroup.IdGroup" class="control-label"></label>
+                <input asp-for="ActiveGroup.IdGroup" class="form-control" />
+                <span asp-validation-for="ActiveGroup.IdGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveGroup.Warden" class="control-label"></label>
+                <input asp-for="ActiveGroup.Warden" class="form-control" />
+                <span asp-validation-for="ActiveGroup.Warden" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveGroup.DeputyWarden" class="control-label"></label>
+                <input asp-for="ActiveGroup.DeputyWarden" class="form-control" />
+                <span asp-validation-for="ActiveGroup.DeputyWarden" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveGroup.CommitteeForEducationalActivities" class="control-label"></label>
+                <input asp-for="ActiveGroup.CommitteeForEducationalActivities" class="form-control" />
+                <span asp-validation-for="ActiveGroup.CommitteeForEducationalActivities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveGroup.DraftingCommittee" class="control-label"></label>
+                <input asp-for="ActiveGroup.DraftingCommittee" class="form-control" />
+                <span asp-validation-for="ActiveGroup.DraftingCommittee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveGroup.SportsCommittee" class="control-label"></label>
+                <input asp-for="ActiveGroup.SportsCommittee" class="form-control" />
+                <span asp-validation-for="ActiveGroup.SportsCommittee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveGroup.LaborCommittee" class="control-label"></label>
+                <input asp-for="ActiveGroup.LaborCommittee" class="form-control" />
+                <span asp-validation-for="ActiveGroup.LaborCommittee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveGroup.CommitteeForCulturalWork" class="control-label"></label>
+                <input asp-for="ActiveGroup.CommitteeForCulturalWork" class="form-control" />
+                <span asp-validation-for="ActiveGroup.CommitteeForCulturalWork" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveGroup.ScholarshipCommission" class="control-label"></label>
+                <input asp-for="ActiveGroup.ScholarshipCommission" class="form-control" />
+                <span asp-validation-for="ActiveGroup.ScholarshipCommission" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

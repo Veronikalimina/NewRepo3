@@ -1,0 +1,48 @@
+﻿@page
+@model WebApplication1.Pages.Authentications.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Authentication[0].IdCurator)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Authentication[0].Login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Authentication[0].Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Authentication[0].IdUser)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Authentication) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCurator)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Login)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUser)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdAuthentication">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdAuthentication">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdAuthentication">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

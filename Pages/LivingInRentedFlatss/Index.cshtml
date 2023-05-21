@@ -1,0 +1,36 @@
+﻿@page
+@model WebApplication1.Pages.LivingInRentedFlatss.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LivingInRentedFlats[0].IdStudent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LivingInRentedFlats[0].Adress)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.LivingInRentedFlats) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdStudent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adress)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdEntryLivingInRentedFlats">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdEntryLivingInRentedFlats">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdEntryLivingInRentedFlats">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,12 +1,15 @@
-﻿namespace WebApplication1.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication1.DTO
 {
     public class Student
     {
-        public int IdStudent { get; set; }
-        public int IdGroup { get; set; }
+        [Key]
+        public Int64 IdStudent { get; set; }
+        public Int64 IdGroup { get; set; }
         public string Surname { get; set; } = "";
         public string Name { get; set; } = "";
         public string MiddleName { get; set; } = "";
-        public DateOnly Birthdate { get; set; }
+        public DateTime Birthdate { get; set; }
     }
 }

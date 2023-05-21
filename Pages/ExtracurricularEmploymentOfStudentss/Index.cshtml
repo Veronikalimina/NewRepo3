@@ -1,0 +1,48 @@
+﻿@page
+@model WebApplication1.Pages.ExtracurricularEmploymentOfStudentss.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents[0].IdCourse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents[0].IdStudent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents[0].CollegeActivity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents[0].ActivitiesOutsideCollege)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ExtracurricularEmploymentOfStudents) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCourse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdStudent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollegeActivity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActivitiesOutsideCollege)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdExtracurricularEmploymentOfStudents">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdExtracurricularEmploymentOfStudents">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdExtracurricularEmploymentOfStudents">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

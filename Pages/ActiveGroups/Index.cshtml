@@ -1,0 +1,78 @@
+﻿@page
+@model WebApplication1.Pages.ActiveGroups.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveGroup[0].IdGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveGroup[0].Warden)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveGroup[0].DeputyWarden)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveGroup[0].CommitteeForEducationalActivities)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveGroup[0].DraftingCommittee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveGroup[0].SportsCommittee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveGroup[0].LaborCommittee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveGroup[0].CommitteeForCulturalWork)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActiveGroup[0].ScholarshipCommission)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ActiveGroup) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Warden)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeputyWarden)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommitteeForEducationalActivities)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DraftingCommittee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SportsCommittee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LaborCommittee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommitteeForCulturalWork)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScholarshipCommission)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdActiveGroup">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdActiveGroup">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdActiveGroup">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
