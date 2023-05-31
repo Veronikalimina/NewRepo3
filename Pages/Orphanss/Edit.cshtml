@@ -9,19 +9,19 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Orphans.IdEntryOrphans" />
             <div class="form-group">
-                <label asp-for="Orphans.IdStudent" class="control-label"></label>
+                <label asp-for="Orphans.IdStudent" class="control-label">Студент</label>
                 <input asp-for="Orphans.IdStudent" class="form-control" />
                 <span asp-validation-for="Orphans.IdStudent" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">Вернуться к таблице</a>
 </div>
 
 @section Scripts {

@@ -7,25 +7,25 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Authentication.IdCurator)
+            Куратор
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Authentication.IdCurator)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Authentication.Login)
+            Логин
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Authentication.Login)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Authentication.Password)
+            Пароль
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Authentication.Password)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Authentication.IdUser)
+            Тип пользователя
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Authentication.IdUser)
@@ -34,7 +34,7 @@
     
     <form method="post">
         <input type="hidden" asp-for="Authentication.IdAuthentication" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться к таблице</a>
     </form>
 </div>

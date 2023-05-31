@@ -2,16 +2,16 @@
 @model WebApplication1.Pages.LiveInAHostels.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.LiveInAHostel[0].IdStudent)
+                Студент
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LiveInAHostel[0].NumberRoom)
+                Номер комнаты
             </th>
             <th></th>
         </tr>
@@ -26,9 +26,9 @@
                 @Html.DisplayFor(modelItem => item.NumberRoom)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdEntryLiveInAHostel">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdEntryLiveInAHostel">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdEntryLiveInAHostel">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdEntryLiveInAHostel">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdEntryLiveInAHostel">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdEntryLiveInAHostel">Удалить</a>
             </td>
         </tr>
 }

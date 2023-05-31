@@ -2,25 +2,25 @@
 @model WebApplication1.Pages.Students.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Student[0].IdGroup)
+                Группа
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Student[0].Surname)
+                Фамилия
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Student[0].Name)
+                Имя
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Student[0].MiddleName)
+                Отчество
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Student[0].Birthdate)
+                Дата рождения
             </th>
             <th></th>
         </tr>
@@ -44,9 +44,9 @@
                 @Html.DisplayFor(modelItem => item.Birthdate)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdStudent">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdStudent">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdStudent">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdStudent">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdStudent">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdStudent">Удалить</a>
             </td>
         </tr>
 }

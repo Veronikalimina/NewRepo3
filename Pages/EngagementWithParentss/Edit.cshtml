@@ -9,34 +9,34 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="EngagementWithParents.IdEngagementWithParents" />
             <div class="form-group">
-                <label asp-for="EngagementWithParents.DateConversation" class="control-label"></label>
+                <label asp-for="EngagementWithParents.DateConversation" class="control-label">Дата</label>
                 <input asp-for="EngagementWithParents.DateConversation" class="form-control" />
                 <span asp-validation-for="EngagementWithParents.DateConversation" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EngagementWithParents.IdStudent" class="control-label"></label>
+                <label asp-for="EngagementWithParents.IdStudent" class="control-label">Студент</label>
                 <input asp-for="EngagementWithParents.IdStudent" class="form-control" />
                 <span asp-validation-for="EngagementWithParents.IdStudent" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EngagementWithParents.EssenceOfConversation" class="control-label"></label>
+                <label asp-for="EngagementWithParents.EssenceOfConversation" class="control-label">Суть</label>
                 <input asp-for="EngagementWithParents.EssenceOfConversation" class="form-control" />
                 <span asp-validation-for="EngagementWithParents.EssenceOfConversation" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EngagementWithParents.AcceptedDecision" class="control-label"></label>
+                <label asp-for="EngagementWithParents.AcceptedDecision" class="control-label">Принятое решение</label>
                 <input asp-for="EngagementWithParents.AcceptedDecision" class="form-control" />
                 <span asp-validation-for="EngagementWithParents.AcceptedDecision" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">Вернуться к таблице</a>
 </div>
 
 @section Scripts {

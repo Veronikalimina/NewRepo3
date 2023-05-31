@@ -7,7 +7,7 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.OneParent.IdStudent)
+            Студент
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.OneParent.IdStudent)
@@ -17,6 +17,6 @@
     <form method="post">
         <input type="hidden" asp-for="OneParent.IdEntryOneParent" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
+        <a asp-page="./Index">Вернуться к таблице</a>
     </form>
 </div>

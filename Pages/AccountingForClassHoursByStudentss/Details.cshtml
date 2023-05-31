@@ -6,13 +6,13 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.AccountingForClassHoursByStudents.IdStudent)
+            Студент
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.AccountingForClassHoursByStudents.IdStudent)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.AccountingForClassHoursByStudents.ClassHourDate)
+            Дата классного часа
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.AccountingForClassHoursByStudents.ClassHourDate)
@@ -20,6 +20,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.AccountingForClassHoursByStudents?.IdAccountingForClassHoursByStudents">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.AccountingForClassHoursByStudents?.IdAccountingForClassHoursByStudents">Изменить</a> |
+    <a asp-page="./Index">Вернуться к таблице</a>
 </div>

@@ -2,13 +2,13 @@
 @model WebApplication1.Pages.Orphanss.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Orphans[0].IdStudent)
+                Студент
             </th>
             <th></th>
         </tr>
@@ -20,9 +20,9 @@
                 @Html.DisplayFor(modelItem => item.IdStudent)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdEntryOrphans">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdEntryOrphans">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdEntryOrphans">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdEntryOrphans">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdEntryOrphans">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdEntryOrphans">Удалить</a>
             </td>
         </tr>
 }

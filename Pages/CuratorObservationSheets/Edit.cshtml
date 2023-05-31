@@ -9,24 +9,24 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="CuratorObservationSheet.IdCuratorObservationSheet" />
             <div class="form-group">
-                <label asp-for="CuratorObservationSheet.IdStudent" class="control-label"></label>
+                <label asp-for="CuratorObservationSheet.IdStudent" class="control-label">Студент</label>
                 <input asp-for="CuratorObservationSheet.IdStudent" class="form-control" />
                 <span asp-validation-for="CuratorObservationSheet.IdStudent" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CuratorObservationSheet.BriefDescription" class="control-label"></label>
+                <label asp-for="CuratorObservationSheet.BriefDescription" class="control-label">Характеристика</label>
                 <input asp-for="CuratorObservationSheet.BriefDescription" class="form-control" />
                 <span asp-validation-for="CuratorObservationSheet.BriefDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">Вернуться к таблице</a>
 </div>
 
 @section Scripts {

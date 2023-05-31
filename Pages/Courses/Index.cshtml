@@ -2,13 +2,13 @@
 @model WebApplication1.Pages.Courses.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Course[0].NumberCourse)
+                Номер курса
             </th>
             <th></th>
         </tr>
@@ -20,9 +20,9 @@
                 @Html.DisplayFor(modelItem => item.NumberCourse)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.idCourse">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.idCourse">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.idCourse">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.idCourse">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.idCourse">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.idCourse">Удалить</a>
             </td>
         </tr>
 }

@@ -2,22 +2,22 @@
 @model WebApplication1.Pages.Authentications.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Authentication[0].IdCurator)
+                Куратор
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Authentication[0].Login)
+                Логин
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Authentication[0].Password)
+                Пароль
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Authentication[0].IdUser)
+                Тип пользователя
             </th>
             <th></th>
         </tr>
@@ -38,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.IdUser)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdAuthentication">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdAuthentication">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdAuthentication">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdAuthentication">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdAuthentication">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdAuthentication">Удалить</a>
             </td>
         </tr>
 }

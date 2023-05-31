@@ -2,22 +2,22 @@
 @model WebApplication1.Pages.ExtracurricularEmploymentOfStudentss.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents[0].IdCourse)
+                Курс
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents[0].IdStudent)
+                Студент
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents[0].CollegeActivity)
+                Деятельность в колледже
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents[0].ActivitiesOutsideCollege)
+                Деятельность вне колледжа
             </th>
             <th></th>
         </tr>
@@ -38,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.ActivitiesOutsideCollege)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdExtracurricularEmploymentOfStudents">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdExtracurricularEmploymentOfStudents">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdExtracurricularEmploymentOfStudents">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdExtracurricularEmploymentOfStudents">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdExtracurricularEmploymentOfStudents">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdExtracurricularEmploymentOfStudents">Удалить</a>
             </td>
         </tr>
 }

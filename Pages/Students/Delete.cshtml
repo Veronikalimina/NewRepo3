@@ -7,31 +7,31 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.IdGroup)
+            Группа
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Student.IdGroup)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.Surname)
+            Фамилия
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Student.Surname)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.Name)
+            Имя
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Student.Name)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.MiddleName)
+            Отчество
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Student.MiddleName)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.Birthdate)
+            Дата рождения
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Student.Birthdate)
@@ -41,6 +41,6 @@
     <form method="post">
         <input type="hidden" asp-for="Student.IdStudent" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
+        <a asp-page="./Index">Вернуться к таблице</a>
     </form>
 </div>

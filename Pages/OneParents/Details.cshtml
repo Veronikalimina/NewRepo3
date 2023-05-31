@@ -6,7 +6,7 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.OneParent.IdStudent)
+            Студент
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.OneParent.IdStudent)
@@ -14,6 +14,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.OneParent?.IdEntryOneParent">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.OneParent?.IdEntryOneParent">Изменить</a> |
+    <a asp-page="./Index">Вернуться к таблице</a>
 </div>

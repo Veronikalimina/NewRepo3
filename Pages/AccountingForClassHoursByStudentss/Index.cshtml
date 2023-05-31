@@ -2,16 +2,16 @@
 @model WebApplication1.Pages.AccountingForClassHoursByStudentss.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AccountingForClassHoursByStudents[0].IdStudent)
+                Студент
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AccountingForClassHoursByStudents[0].ClassHourDate)
+                Дата классного часа
             </th>
             <th></th>
         </tr>
@@ -20,15 +20,16 @@
 @foreach (var item in Model.AccountingForClassHoursByStudents) {
         <tr>
             <td>
-                    @Html.DisplayFor(modelItem => item.IdStudent)
+                    <asp:BoundField DataField="Name" HeaderText="Имя" SortExpression="Name" />
+                    @Html.DisplayFor(modelItem => item.IdStudent)   
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ClassHourDate)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdAccountingForClassHoursByStudents">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdAccountingForClassHoursByStudents">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdAccountingForClassHoursByStudents">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdAccountingForClassHoursByStudents">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdAccountingForClassHoursByStudents">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdAccountingForClassHoursByStudents">Удалить</a>
             </td>
         </tr>
 }

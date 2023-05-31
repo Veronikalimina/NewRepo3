@@ -7,25 +7,25 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents.IdCourse)
+            Курс
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ExtracurricularEmploymentOfStudents.IdCourse)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents.IdStudent)
+            Студент
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ExtracurricularEmploymentOfStudents.IdStudent)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents.CollegeActivity)
+            Деятельность в колледже
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ExtracurricularEmploymentOfStudents.CollegeActivity)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ExtracurricularEmploymentOfStudents.ActivitiesOutsideCollege)
+            Деятельность вне колледжа
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ExtracurricularEmploymentOfStudents.ActivitiesOutsideCollege)
@@ -34,7 +34,7 @@
     
     <form method="post">
         <input type="hidden" asp-for="ExtracurricularEmploymentOfStudents.IdExtracurricularEmploymentOfStudents" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться к таблице</a>
     </form>
 </div>

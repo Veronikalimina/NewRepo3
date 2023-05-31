@@ -2,19 +2,19 @@
 @model WebApplication1.Pages.Curators.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Curator[0].Surname)
+                Фамилия
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Curator[0].Name)
+                Имя
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Curator[0].MiddleName)
+                Отчество
             </th>
             <th></th>
         </tr>
@@ -32,9 +32,9 @@
                 @Html.DisplayFor(modelItem => item.MiddleName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdCurator">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdCurator">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdCurator">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdCurator">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdCurator">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdCurator">Удалить</a>
             </td>
         </tr>
 }

@@ -2,16 +2,16 @@
 @model WebApplication1.Pages.CuratorObservationSheets.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CuratorObservationSheet[0].IdStudent)
+                Студент
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CuratorObservationSheet[0].BriefDescription)
+                Характеристика
             </th>
             <th></th>
         </tr>
@@ -26,9 +26,9 @@
                 @Html.DisplayFor(modelItem => item.BriefDescription)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdCuratorObservationSheet">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdCuratorObservationSheet">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdCuratorObservationSheet">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdCuratorObservationSheet">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdCuratorObservationSheet">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdCuratorObservationSheet">Удалить</a>
             </td>
         </tr>
 }

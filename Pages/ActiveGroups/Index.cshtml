@@ -2,37 +2,37 @@
 @model WebApplication1.Pages.ActiveGroups.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ActiveGroup[0].IdGroup)
+                Группа
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActiveGroup[0].Warden)
+                Староста
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActiveGroup[0].DeputyWarden)
+                Заместитель старосты
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActiveGroup[0].CommitteeForEducationalActivities)
+                Комитет по образовательной деятельности
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActiveGroup[0].DraftingCommittee)
+                Редакционный комитет
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActiveGroup[0].SportsCommittee)
+                Комитет по спорту
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActiveGroup[0].LaborCommittee)
+                Комитет по трудовой деятельности
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActiveGroup[0].CommitteeForCulturalWork)
+                Комитет по культурно-массовой работе
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActiveGroup[0].ScholarshipCommission)
+                Стипендиальная комиссия
             </th>
             <th></th>
         </tr>
@@ -68,9 +68,9 @@
                 @Html.DisplayFor(modelItem => item.ScholarshipCommission)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdActiveGroup">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdActiveGroup">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdActiveGroup">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdActiveGroup">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdActiveGroup">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdActiveGroup">Удалить</a>
             </td>
         </tr>
 }

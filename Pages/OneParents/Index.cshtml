@@ -2,13 +2,13 @@
 @model WebApplication1.Pages.OneParents.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.OneParent[0].IdStudent)
+                Студент
             </th>
             <th></th>
         </tr>
@@ -20,9 +20,9 @@
                 @Html.DisplayFor(modelItem => item.IdStudent)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdEntryOneParent">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdEntryOneParent">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdEntryOneParent">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdEntryOneParent">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdEntryOneParent">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdEntryOneParent">Удалить</a>
             </td>
         </tr>
 }

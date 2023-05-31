@@ -8,34 +8,34 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ExtracurricularEmploymentOfStudents.IdCourse" class="control-label"></label>
+                <label asp-for="ExtracurricularEmploymentOfStudents.IdCourse" class="control-label">Курс</label>
                 <input asp-for="ExtracurricularEmploymentOfStudents.IdCourse" class="form-control" />
                 <span asp-validation-for="ExtracurricularEmploymentOfStudents.IdCourse" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ExtracurricularEmploymentOfStudents.IdStudent" class="control-label"></label>
+                <label asp-for="ExtracurricularEmploymentOfStudents.IdStudent" class="control-label">Студент</label>
                 <input asp-for="ExtracurricularEmploymentOfStudents.IdStudent" class="form-control" />
                 <span asp-validation-for="ExtracurricularEmploymentOfStudents.IdStudent" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ExtracurricularEmploymentOfStudents.CollegeActivity" class="control-label"></label>
+                <label asp-for="ExtracurricularEmploymentOfStudents.CollegeActivity" class="control-label">Деятельность в колледже</label>
                 <input asp-for="ExtracurricularEmploymentOfStudents.CollegeActivity" class="form-control" />
                 <span asp-validation-for="ExtracurricularEmploymentOfStudents.CollegeActivity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ExtracurricularEmploymentOfStudents.ActivitiesOutsideCollege" class="control-label"></label>
+                <label asp-for="ExtracurricularEmploymentOfStudents.ActivitiesOutsideCollege" class="control-label">Деятельность вне колледжа</label>
                 <input asp-for="ExtracurricularEmploymentOfStudents.ActivitiesOutsideCollege" class="form-control" />
                 <span asp-validation-for="ExtracurricularEmploymentOfStudents.ActivitiesOutsideCollege" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Создать" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Вернуться к таблице</a>
 </div>
 
 @section Scripts {

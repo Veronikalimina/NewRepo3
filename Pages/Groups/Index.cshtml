@@ -2,16 +2,16 @@
 @model WebApplication1.Pages.Groups.IndexModel
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Group[0].IdCurator)
+                Куратор
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Group[0].NameGroup)
+                Группа
             </th>
             <th></th>
         </tr>
@@ -26,9 +26,9 @@
                 @Html.DisplayFor(modelItem => item.NameGroup)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdGroup">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdGroup">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdGroup">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.IdGroup">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdGroup">Просмотр</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdGroup">Удалить</a>
             </td>
         </tr>
 }
